@@ -1,0 +1,190 @@
+/*
+* @Author: zengxianlin
+* @Date:   2016-11-23 09:53:37
+* @Last Modified by:   877529974@qq.com
+* @Last Modified time: 2016-11-28 14:09:04
+*/
+/*初始化样式*/
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0;}
+body { background-color:#fff; color:#555; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+em,i { font-style:normal; }
+strong { font-weight: normal; }
+td,th,caption { font-size:14px; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+li, img, label, input { vertical-align: middle;}
+a { color:#333; text-decoration:none; }
+a,button,input{
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+box-shadow: none;
+outline: none;
+}
+// a:hover { text-decoration:underline; }
+legend { color:#000; }
+fieldset, img { border:none; display: block; }
+ol,ul,li { list-style:none; }
+input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; font-size:100%; }
+table { border-collapse:collapse; border-spacing:0;}
+/*移动端初始化*/
+html {overflow-y: scroll;}
+/*超出自减*/
+*{ -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+}
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+}
+/* 去除iPhone中默认的input样式 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input{-webkit-appearance:none; resize: none;}
+/* 设置HTML5元素为块 */
+article, aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section {
+display: block;
+}
+/* 图片自适应 */
+img {
+max-width: 100%;
+height: auto;
+width:auto\9; /* ie8 */
+-ms-interpolation-mode:bicubic;/*为了照顾ie图片缩放失真*/
+}
+/*flex 布局*/
+.flex{
+    display: -webkit-box;
+    display: -webkit-flex; /* Safari */
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+}
+.flex > *{
+    flex:1;
+}
+.flex3{
+    display: box;             /* OLD - Android 4.4- */
+    display: -webkit-box;     /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;       /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;     /* TWEENER - IE 10 */
+    display: -webkit-flex;   /* NEW - Chrome */
+    display: flex;           /* NEW, Spec - Opera 12.1, Firefox */
+
+    /* center：弹性盒子元素在该行的侧轴（纵轴）上居中放置。（如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度）。 */
+    /* 09版 */
+      -webkit-box-align: center;
+    /* 12版 */
+    -webkit-align-items: center;
+       -moz-align-items: center;
+        -ms-align-items: center;
+         -o-align-items: center;
+            align-items: center;
+
+    -webkit-flex-flow: row wrap;
+       -moz-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+         -o-flex-flow: row wrap;
+            flex-flow: row wrap;
+
+    /* flex-start：各行向弹性盒容器的起始位置堆叠。弹性盒容器中第一行的侧轴起始边界紧靠住该弹性盒容器的侧轴起始边界，之后的每一行都紧靠住前面一行。 */
+    -webkit-align-content: flex-start;
+       -moz-align-content: flex-start;
+        -ms-align-content: flex-start;
+         -o-align-content: flex-start;
+            align-content: flex-start;
+}
+.flex3 > *{
+    -webkit-flex: 0 0 32%;
+       -moz-flex: 0 0 32%;
+        -ms-flex: 0 0 32%;
+         -o-flex: 0 0 32%;
+            flex: 0 0 32%;
+    text-align: center;
+}
+#app{
+    max-width:750px;
+    margin:0 auto;
+    // padding-bottom: 55px;
+}
+/* css common */
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix { *zoom:1; }
+
+/*公共样式*/
+// margin-top
+.mt10{margin-top: 0.227273rem !important;}
+.mt12{margin-top: 0.272727rem !important;}
+.mt14{margin-top: 0.318182rem !important;}
+.mt16{margin-top: 0.363636rem !important;}
+.mt18{margin-top: 0.409091rem !important;}
+.mt20{margin-top: 0.454545rem !important;}
+// margin-bottom
+.mb10{margin-bottom: 0.227273rem !important;}
+.mb12{margin-bottom: 0.272727rem !important;}
+.mb14{margin-bottom: 0.318182rem !important;}
+.mb16{margin-bottom: 0.363636rem !important;}
+.mb18{margin-bottom: 0.409091rem !important;}
+.mb20{margin-bottom: 0.454545rem !important;}
+// margin-left
+.ml10{margin-left: 0.227273rem !important;}
+.ml12{margin-left: 0.272727rem !important;}
+.ml14{margin-left: 0.318182rem !important;}
+.ml16{margin-left: 0.363636rem !important;}
+.ml18{margin-left: 0.409091rem !important;}
+.ml20{margin-left: 0.454545rem !important;}
+// margin-right
+.mr10{margin-right: 0.227273rem !important;}
+.mr12{margin-right: 0.272727rem !important;}
+.mr14{margin-right: 0.318182rem !important;}
+.mr16{margin-right: 0.363636rem !important;}
+.mr18{margin-right: 0.409091rem !important;}
+.mr20{margin-right: 0.454545rem !important;}
+
+// padding-top
+.pt10{padding-top: 0.227273rem !important;}
+.pt12{padding-top: 0.272727rem !important;}
+.pt14{padding-top: 0.318182rem !important;}
+.pt16{padding-top: 0.363636rem !important;}
+.pt18{padding-top: 0.409091rem !important;}
+.pt20{padding-top: 0.454545rem !important;}
+// padding-bottom
+.pb10{padding-bottom: 0.227273rem !important;}
+.pb12{padding-bottom: 0.272727rem !important;}
+.pb14{padding-bottom: 0.318182rem !important;}
+.pb16{padding-bottom: 0.363636rem !important;}
+.pb18{padding-bottom: 0.409091rem !important;}
+.pb20{padding-bottom: 0.454545rem !important;}
+// padding-left
+.pl10{padding-left: 0.227273rem !important;}
+.pl12{padding-left: 0.272727rem !important;}
+.pl14{padding-left: 0.318182rem !important;}
+.pl16{padding-left: 0.363636rem !important;}
+.pl18{padding-left: 0.409091rem !important;}
+.pl20{padding-left: 0.454545rem !important;}
+// padding-right
+.pr10{padding-right: 0.227273rem !important;}
+.pr12{padding-right: 0.272727rem !important;}
+.pr14{padding-right: 0.318182rem !important;}
+.pr16{padding-right: 0.363636rem !important;}
+.pr18{padding-right: 0.409091rem !important;}
+.pr20{padding-right: 0.454545rem !important;}
+
+// 定位
+.pf{position: fixed;}
+.pr{position: relative;}
+.pa{position: absolute;}
+
+.tc{text-align: center;}
+
+.z10{z-index: 10}
+
+.empty{
+  width:100%;
+  height:55px;
+  background-color:#fff;
+}
